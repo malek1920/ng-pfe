@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+p {
+  font-size: 15px !important;
+}
+
+.main-container {
+  border: none !important;
+  min-height: 700px;
+}
+
+.form-control.form-control-sidebar {
+  flex: 1 1 auto !important;
+  width: calc(100% - 50px) !important;
+}

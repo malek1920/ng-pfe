@@ -1,0 +1,83 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+
+
+      <div class="table">
+
+        <table class="table table-striped table-bordered table-sm row-border hover"  id="datatableexample">
+        
+          <thead>
+            <tr >
+              <th>Permission Name</th>
+              <th  >Edit </th>
+              <th  >Delete </th>
+              <th  >ADD </th>
+
+      
+      
+        
+        
+            </tr>
+          </thead>
+          <tbody>
+           <tr *ngFor="let permission of data" ><!--*ngFor="let group of data"-->
+                 <td>{{permission.name}}</td><!--{{group.email}}-->
+               
+                 <td>
+                   <i class='fas fa-edit' routerLink="../permission/edit-permission/{{permission.id}}" style='font-size:20px;color:green'></i>
+                 </td>
+                 <td>
+                   <a class='fas fa-trash-alt mx-4' style='font-size:20px;color:red ' routerLink="/listofroles" (click)="deleteData(permission.id)"></a>
+                 </td>
+                 <td>
+                   <a class="fa fa-plus"  data-toggle="modal" data-target="#myModal2" style="font-size:20px;color:#00b08c"></a>
+                 </td>
+      
+      
+             </tr>
+          </tbody>
+        </table>
+        
+        </div>
+        
+  
+
+  
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add New Role</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="insertData()">
+
+            <div class="form-group">
+              <label for="word" class="col-form-label">Word:</label>
+              <input type="text" class="form-control" name="word" [(ngModel)]="form.name"required="">
+            </div>
+          
+  
+            
+            <div class="span9 btn-block">
+              <input class="btn btn-large btn-block  btn-outline-info" type="submit" value="Save changes">
+          </div>
+            
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  

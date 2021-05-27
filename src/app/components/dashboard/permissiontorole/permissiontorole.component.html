@@ -1,0 +1,28 @@
+
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+  
+  <form  (ngSubmit)="insertData()" >
+    <!--
+      <div class="form-check" *ngFor="let role of data"> 
+          <input type="checkbox" class="k-checkbox" name="name" [(ngModel)]="formrole.selected" (change)="insertData()" style="width: auto"  >
+        <label class="form-check-label" for="exampleCheck1"  >{{role.name}} - {{role.selected}} </label>
+      </div
+   
+    -->
+  <div class="roles" *ngFor="let test of data"  >
+  
+      <input name="role_id"  type="checkbox" value="{{ test.id }}" [(ngModel)]="form[test.id]" > {{test.name}} - {{test.selected}}
+    
+  
+     
+   </div>
+   <input class="btn btn-large btn-block  btn-outline-info" type="submit" value="Assign Role To User">
+  
+    </form>
+    </div>
+    </div>
+    </div>

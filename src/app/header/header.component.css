@@ -1,0 +1,29 @@
+.header{
+    overflow: hidden;
+    background-color: #8f8f8f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000 !important;
+
+
+
+  }
+.actions{
+  align-items: center !important;
+  margin-top: -6px !important;
+}
+
+.action {
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 18px !important;
+  border: 2px solid #ffffff;
+margin-right: 5px;}
+
+li a{
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 18px !important;
+
+}

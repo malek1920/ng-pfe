@@ -1,0 +1,45 @@
+<div class="container">  
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Liste utilisateur</h4> 
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">offre</th>
+        <th scope="col">Nom et Prenom</th>   
+        <th scope="col">Telephone</th>   
+        <th scope="col">Adresse</th>   
+        <th scope="col">#</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users.users; let i = index">
+        <th scope="row">{{user.id}}</th>
+        <th scope="row">{{user.offre}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.phone}}</td>  
+        <td>{{user.adress}}</td>    
+        <td> 
+       <button class="btn btn-danger" 
+        (click)="deleteUtilisateur(user.id , i)" >supprimer</button>
+
+        </td>  
+      </tr> 
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</div> 
+</div>

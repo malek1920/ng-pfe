@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-end mb-3">
+    <a class="btn btn-primary" [routerLink]="['/dashboard/' + id_parent + '/addmv']">Ajouter</a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Libelle</th>
+        <th scope="col">Credit total</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="listeMvComptable">
+      <tr *ngFor="let MvComptable of listeMvComptable">
+        <td>{{ MvComptable.code }}</td>
+        <td>{{ MvComptable.libelle }}</td>
+        <td>{{ MvComptable.m_credit_total }}</td>
+        <td>
+          <button [routerLink]="['/dashboard/' + id_parent + '/editmv/' + MvComptable.id ]" class="btnn bg-success mr-1">
+            <i class="fa fa-edit"></i>
+          </button>
+          <button (click)="deleteMvComptable(MvComptable.id)" class="btnn bg-danger">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

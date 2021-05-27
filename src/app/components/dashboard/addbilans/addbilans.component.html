@@ -1,0 +1,30 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <h2>Ajouter bilans</h2>
+        </div>
+    </div>
+    <div class="content-body">
+        <div class="container-fluid">
+            <form (ngSubmit)="addbilans()">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" class="form-control" placeholder="Nom " name="nom" [(ngModel)]="form.nom" >
+                </div>
+                <div class="form-group">
+                    <label>Code</label>
+                    <input type="text" class="form-control" placeholder="Code" name="name" [(ngModel)]="form.code" >
+                </div>
+                <div class="form-group">
+                    <label>Etat</label>
+                    <select name="etat" class="form-control" [(ngModel)]="form.etat">
+                        <option value="Actif" selected>Actif</option>
+                        <option value="Passif">Passif</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="MV comptable id" name="mv_comptable_id" [(ngModel)]="form.mv_comptable_id" >
+                </div>
+                <button class="btn btn-primary" id="login-btn">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>

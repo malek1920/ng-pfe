@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-end mb-3">
+    <a class="btn btn-primary" routerLink="/dashboard/addbilans">Ajouter</a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">code</th>
+        <th scope="col">nom</th>
+        <th scope="col">etat</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="listebilans">
+      <tr *ngFor="let bilans of listebilans">
+        <td>{{ bilans.id }}</td>
+        <td>{{ bilans.code }}</td>
+        <td>{{ bilans.nom }}</td>
+        <td>{{ bilans.etat }}</td>
+        <td>
+          <button (click)="deletebilans(bilans.id)" class="btnn bg-danger">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

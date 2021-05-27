@@ -1,0 +1,106 @@
+<div class="container mt-5 pb-5">
+  <br><br><br><br><br>
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7">
+      <div class="card bg-secondary border-0 mb-0">
+        <div class="card-body px-lg-5 py-lg-5">
+          <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Nom et Prénom</label>
+              <input type="text" formControlName="name" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">name is required</div>
+                <div *ngIf="f.name.errors.name">Email must be a valid name</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="text" formControlName="email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+            <input type="hidden" formControlName="role" [(ngModel)]="datastatrole">
+            <input type="hidden" formControlName="c_id" [(ngModel)]="datastat">
+            <div class="form-group col">
+              <label>Offre</label>
+              <select class="form-control" formControlName="offre"
+                [ngClass]="{ 'is-invalid': submitted && f.offre.errors }">
+                <option *ngFor="let offre of listeOffres" [value]="offre.name">{{ offre.name }}</option>
+              </select>
+              <div *ngIf="submitted && f.offre.errors" class="invalid-feedback">
+                <div *ngIf="f.offre.errors.required">offre is required</div>
+                <div *ngIf="f.offre.errors.minlength">offre must be at least 6 characters</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Adresse</label>
+              <input type="text" formControlName="adress" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.adress.errors }" />
+              <div *ngIf="submitted && f.adress.errors" class="invalid-feedback">
+                <div *ngIf="f.adress.errors.required">adress is required</div>
+                <div *ngIf="f.adress.errors.adress">adress must be a valid adress address</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label>Telephone</label>
+              <input type="text" formControlName="phone" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+              <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                <div *ngIf="f.phone.errors.required">phone is required</div>
+                <div *ngIf="f.phone.errors.phone">phone must be a valid phone address</div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group col">
+              <label>Mot de passe</label>
+              <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                <br>
+              </div>
+            </div>
+
+            <div class="form-group col">
+              <label>Confirmer mot de passe</label>
+              <input type="password" formControlName="Confpassword" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.Confpassword.errors }" />
+              <div *ngIf="submitted && f.Confpassword.errors" class="invalid-feedback">
+                <div *ngIf="f.Confpassword.errors.required">Confpassword is required</div>
+                <div *ngIf="f.Confpassword.errors.minlength">Confpassword must be at least 6 characters</div>
+              </div>
+            </div>
+            <br>
+            <div class="alert alert-danger px-3 py-2" *ngIf="password_match">Valider le mot de passe!</div>
+            <br>
+            <div class="text-center">
+              <button class="btn btn-primary" style="padding: 8px;">Inscription</button>
+              <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button> -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><br><br><br>
+    <div class="row mt-3" *ngIf="!this.userConnected">
+      <div class="col-6">
+        <a href="#" class="text-light"><small></small></a>
+
+        <div class="col-6 text-right">
+          <a routerLink="/login" style="padding: 10px;" class="btn btn-primary ml-2 text-black"><small>Se
+              connecter</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

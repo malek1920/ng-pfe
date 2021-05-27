@@ -1,0 +1,18 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <h2>Ajouter offre</h2>
+        </div>
+    </div>
+    <div class="content-body">
+        <div class="container-fluid">
+            <form (ngSubmit)="addOffre()">
+                <div class="form-group">
+                    <label>Nom offre</label>
+                    <input type="text" class="form-control" placeholder="Nom offre" name="name" [(ngModel)]="form.name" >
+                </div>
+                <button class="btn btn-primary" id="login-btn">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>

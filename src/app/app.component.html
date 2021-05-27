@@ -1,0 +1,12 @@
+
+<app-header *ngIf="!this.main_service.hasRoute('dashboard')"></app-header>
+<ng-snotify *ngIf="!this.main_service.hasRoute('dashboard')"></ng-snotify>
+<router-outlet ></router-outlet>
+<app-footer *ngIf="!this.main_service.hasRoute('dashboard')"></app-footer>
+
+
+<!--
+<app-admin-home></app-admin-home>
+<app-sidebar></app-sidebar>
+<app-admin-footer></app-admin-footer>
+-->
