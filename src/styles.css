@@ -15,7 +15,3 @@ p {
   flex: 1 1 auto !important;
   width: calc(100% - 50px) !important;
 }
-
-body:not(.layout-fixed) .main-sidebar {
-  position: fixed !important;
-}

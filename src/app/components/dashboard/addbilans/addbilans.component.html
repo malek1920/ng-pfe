@@ -21,29 +21,7 @@
                         <option value="Actif" selected>Actif</option>
                         <option value="Passif">Passif</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label>Movement comptable</label>
-                                    
-                    <select name="etat" class="form-control" [(ngModel)]="form.mv_comptable_id">
-                        <option value="Actif" *ngFor="let mv_comptable of listeMvComptable" [value]="mv_comptable.id">{{ mv_comptable.code }} | {{ mv_comptable.libelle_debit }} - {{ mv_comptable.libelle_credit }}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Actif</label>
-                    <input type="number" class="form-control" placeholder="Actif" name="actif" [(ngModel)]="form.actif" >
-                </div>
-                <div class="form-group">
-                    <label>Total actif</label>
-                    <input type="number" class="form-control" placeholder="Total actif" name="total_actif" [(ngModel)]="form.total_actif" >
-                </div>
-                <div class="form-group">
-                    <label>Passif</label>
-                    <input type="number" class="form-control" placeholder="Passif" name="passif" [(ngModel)]="form.passif" >
-                </div>
-                <div class="form-group">
-                    <label>Total passif</label>
-                    <input type="number" class="form-control" placeholder="Total passif" name="total_passif" [(ngModel)]="form.total_passif" >
+                    <input type="text" class="form-control" placeholder="MV comptable id" name="mv_comptable_id" [(ngModel)]="form.mv_comptable_id" >
                 </div>
                 <button class="btn btn-primary" id="login-btn">Ajouter</button>
             </form>

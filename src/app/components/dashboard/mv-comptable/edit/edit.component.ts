@@ -14,8 +14,7 @@ export class EditMvComptableComponent implements OnInit {
   public form = {
     code: null,
     f_id: 1,
-    libelle_debit: null,
-    libelle_credit: null,
+    libelle: null,
     m_debit: 0,
     m_credit: null,
     user_id: null,

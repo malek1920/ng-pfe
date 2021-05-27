@@ -5,20 +5,16 @@
     <thead>
       <tr>
         <th scope="col">Code</th>
-        <th scope="col">Libelle début</th>
-        <th scope="col">Credit début</th>
-        <th scope="col">Libelle crédit</th>
-        <th scope="col">Credit crédit</th>
+        <th scope="col">Libelle</th>
+        <th scope="col">Credit total</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody *ngIf="listeMvComptable">
       <tr *ngFor="let MvComptable of listeMvComptable">
         <td>{{ MvComptable.code }}</td>
-        <td>{{ MvComptable.libelle_debit }}</td>
-        <td>{{ MvComptable.m_debit }}</td>
-        <td>{{ MvComptable.libelle_credit }}</td>
-        <td>{{ MvComptable.m_credit }}</td>
+        <td>{{ MvComptable.libelle }}</td>
+        <td>{{ MvComptable.m_credit_total }}</td>
         <td>
           <button [routerLink]="['/dashboard/' + id_parent + '/editmv/' + MvComptable.id ]" class="btnn bg-success mr-1">
             <i class="fa fa-edit"></i>
