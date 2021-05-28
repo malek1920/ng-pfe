@@ -5,9 +5,13 @@
     <thead>
       <tr>
         <th scope="col">Id</th>
-        <th scope="col">code</th>
-        <th scope="col">nom</th>
-        <th scope="col">etat</th>
+        <th scope="col">Code</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Etat</th>
+        <th scope="col">Actif</th>
+        <th scope="col">Total actif</th>
+        <th scope="col">Passif</th>
+        <th scope="col">Total passif</th>
       </tr>
     </thead>
     <tbody *ngIf="listebilans">
@@ -16,6 +20,10 @@
         <td>{{ bilans.code }}</td>
         <td>{{ bilans.nom }}</td>
         <td>{{ bilans.etat }}</td>
+        <td>{{ bilans.actif }}</td>
+        <td>{{ bilans.passif }}</td>
+        <td>{{ bilans.total_actif }}</td>
+        <td>{{ bilans.total_passif }}</td>
         <td>
           <button (click)="deletebilans(bilans.id)" class="btnn bg-danger">
             <i class="fa fa-trash"></i>
@@ -24,3 +32,158 @@
       </tr>
     </tbody>
   </table>
+  <div class="mt-5">
+    <table class="table">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th>Bilan</th>
+          <th>Dec-2018</th>
+          <th>Dec-2019</th>
+          <th>Dec-2020</th>
+        </tr>
+        <tr class="bg-light">
+          <th colspan="4">ACTIF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Immo. corporelies</td>
+          <td>65 750</td>
+          <td>116 000</td>
+          <td>53 750</td>
+        </tr>
+        <tr>
+          <td>Immo. incorporelies</td>
+          <td>10 000</td>
+          <td>10 000</td>
+          <td>10 000</td>
+        </tr>
+        <tr>
+          <td>Immo. financières</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>Total immobilisations</th>
+          <th>75 750</th>
+          <th>126 000</th>
+          <th>63 750</th>
+        </tr>
+        <tr>
+          <td>Stocks</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Clients</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Autres créances</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Trésorerie</td>
+          <td>297 000</td>
+          <td>342 479</td>
+          <td>565 218</td>
+        </tr>
+        <tr>
+          <th>Total actif circulant</th>
+          <th>297 000</th>
+          <th>342 479</th>
+          <th>565 218</th>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="bg-light">
+          <th>TOTAL ACTIF</th>
+          <th>372 750</th>
+          <th>468 479</th>
+          <th>628 968</th>
+        </tr>
+        <tr>
+          <th colspan="4"></th>
+        </tr>
+        <tr class="bg-light">
+          <th colspan="4">PASSIF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fournisseurs</td>
+          <td>65 750</td>
+          <td>116 000</td>
+          <td>53 750</td>
+        </tr>
+        <tr>
+          <td>Dettes fiscales et sociales</td>
+          <td>10 000</td>
+          <td>10 000</td>
+          <td>10 000</td>
+        </tr>
+        <tr>
+          <td>Dette financière</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Intérèts accrus non échus</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>Total Dettes</th>
+          <th>75 750</th>
+          <th>126 000</th>
+          <th>63 750</th>
+        </tr>
+        <tr>
+          <td>Capital social</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Prét actionnaires</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Subv. investissement</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Bénéfices non distribués</td>
+          <td>297 000</td>
+          <td>342 479</td>
+          <td>565 218</td>
+        </tr>
+        <tr>
+          <th>Total fonds propres</th>
+          <th>297 000</th>
+          <th>342 479</th>
+          <th>565 218</th>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="bg-light">
+          <th>TOTAL PASSIF</th>
+          <th>372 750</th>
+          <th>468 479</th>
+          <th>628 968</th>
+        </tr>
+        </thead>
+    </table>
+  </div>
