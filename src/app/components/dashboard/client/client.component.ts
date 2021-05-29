@@ -38,7 +38,7 @@ export class ClientComponent implements OnInit {
     this.Notfiy.confirm('Success', {
       buttons: [
         {
-          text: 'client comptable cree avec success'
+          text: 'client comptable suprimé avec success'
         },
       ]
     });

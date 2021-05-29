@@ -6,12 +6,13 @@
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Code</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Etat</th>
-        <th scope="col">Actif</th>
-        <th scope="col">Total actif</th>
-        <th scope="col">Passif</th>
-        <th scope="col">Total passif</th>
+        <th scope="col">libelle passif/actif</th>
+       <!-- <th scope="col">Etat</th>
+       <th scope="col">Actif</th>--> 
+       
+        <th scope="col">Montant</th>
+        <!--<th scope="col">Passif</th>
+        <th scope="col">Total passif</th>-->
       </tr>
     </thead>
     <tbody *ngIf="listebilans">
@@ -19,11 +20,11 @@
         <td>{{ bilans.id }}</td>
         <td>{{ bilans.code }}</td>
         <td>{{ bilans.nom }}</td>
-        <td>{{ bilans.etat }}</td>
-        <td>{{ bilans.actif }}</td>
-        <td>{{ bilans.passif }}</td>
+       <!-- <td>{{ bilans.etat }}</td> 
+      <td>{{ bilans.actif }}</td>
+       <td>{{ bilans.passif }}</td>
+      <td>{{ bilans.total_passif }}</td>-->
         <td>{{ bilans.total_actif }}</td>
-        <td>{{ bilans.total_passif }}</td>
         <td>
           <button (click)="deletebilans(bilans.id)" class="btnn bg-danger">
             <i class="fa fa-trash"></i>
@@ -32,7 +33,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="mt-5">
+  --<div class="mt-5">
     <table class="table">
       <thead>
         <tr class="bg-primary text-white">

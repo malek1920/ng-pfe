@@ -39,7 +39,7 @@ export class BilansComponent implements OnInit {
     this.Notfiy.confirm('Success', {
       buttons: [
         {
-          text: 'offre cree avec success'
+          text: 'bilans supprimé avec success'
         },
       ]
     });

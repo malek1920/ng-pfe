@@ -45,7 +45,7 @@ export class MvComptableComponent implements OnInit {
     this.Notfiy.confirm('Success', {
       buttons: [
         {
-          text: 'Movement comptable global cree avec success'
+          text: 'Movement comptable supprimé avec success'
         },
       ]
     });

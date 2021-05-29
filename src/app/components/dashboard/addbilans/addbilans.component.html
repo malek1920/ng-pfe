@@ -8,8 +8,8 @@
         <div class="container-fluid">
             <form (ngSubmit)="addbilans()">
                 <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" class="form-control" placeholder="Nom " name="nom" [(ngModel)]="form.nom" >
+                    <label>libelle</label>
+                    <input type="text" class="form-control" placeholder="libelle " name="nom" [(ngModel)]="form.nom" >
                 </div>
                 <div class="form-group">
                     <label>Code</label>
@@ -23,27 +23,27 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Movement comptable</label>
+                    <label>compte</label>
                                     
                     <select name="etat" class="form-control" [(ngModel)]="form.mv_comptable_id">
                         <option value="Actif" *ngFor="let mv_comptable of listeMvComptable" [value]="mv_comptable.id">{{ mv_comptable.code }} | {{ mv_comptable.libelle_debit }} - {{ mv_comptable.libelle_credit }}</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Actif</label>
-                    <input type="number" class="form-control" placeholder="Actif" name="actif" [(ngModel)]="form.actif" >
+                    <label>.</label>
+                    <input type="number" class="form-control" placeholder="" name="actif" [(ngModel)]="form.actif" >
                 </div>
                 <div class="form-group">
-                    <label>Total actif</label>
-                    <input type="number" class="form-control" placeholder="Total actif" name="total_actif" [(ngModel)]="form.total_actif" >
+                    <label>Montant</label>
+                    <input type="number" class="form-control" placeholder="Montant" name="total_actif" [(ngModel)]="form.total_actif" >
                 </div>
                 <div class="form-group">
-                    <label>Passif</label>
-                    <input type="number" class="form-control" placeholder="Passif" name="passif" [(ngModel)]="form.passif" >
+                    <label>.</label>
+                    <input type="number" class="form-control" placeholder="" name="passif" [(ngModel)]="form.passif" >
                 </div>
                 <div class="form-group">
-                    <label>Total passif</label>
-                    <input type="number" class="form-control" placeholder="Total passif" name="total_passif" [(ngModel)]="form.total_passif" >
+                    <label>.</label>
+                    <input type="number" class="form-control" placeholder="" name="total_passif" [(ngModel)]="form.total_passif" >
                 </div>
                 <button class="btn btn-primary" id="login-btn">Ajouter</button>
             </form>
